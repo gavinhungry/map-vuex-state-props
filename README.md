@@ -1,12 +1,13 @@
 map-vuex-state-props
 ====================
-Create default [Vuex](https://vuex.vuejs.org) `state`, `mutations` and `actions`
-objects.
+Creates default [Vuex](https://vuex.vuejs.org) `state`, `mutations` and
+`actions` objects.
 
-This sets all default values in `state`, creates a mutation in `mutations` for
-setting to an explicit value and creates an action in `actions` (the name of the
-action is the same as the mutation name) that will only commit the underlying
-mutation if the new value differs from the current value.
+This module sets all default values in `state` (use a getter function as
+`defaultValue` for non-primitive default values), creates a mutation in
+`mutations` for setting to an explicit value and creates an action in `actions`
+(the name of the action is the same as the mutation name) that will only commit
+the underlying mutation if the new value differs from the current value.
 
 Usage
 -----

@@ -1,6 +1,6 @@
 map-vuex-state-props
 ====================
-Create default [Vuex](https://vuex.vuejs.org) state, mutations and actions
+Create default [Vuex](https://vuex.vuejs.org) `state`, `mutations` and `actions`
 objects.
 
 This sets all default values in `state`, creates a mutation in `mutations` for

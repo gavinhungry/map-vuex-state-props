@@ -1,6 +1,6 @@
 {
   "name": "map-vuex-state-props",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Gavin Lloyd <gavinhungry@gmail.com>",
   "description": "Creates default Vuex state, mutations and actions objects",
   "license": "MIT",

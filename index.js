@@ -23,17 +23,22 @@ let mapStateProps = (stateProps, fn) => {
  * mutation if the value has not changed.
  *
  * @param {Object} stateProps
+ * @param {Object} [opts]
+ * @param {Function} [opts.debug]
  * @return {Object} { state, mutations, actions }
  */
-let mapVuexStateProps = stateProps => {
+let mapVuexStateProps = (stateProps, {
+  debug = Function.prototype
+} = {}) => {
   return {
     state: mapStateProps(stateProps, (stateProp, mutation, defaultValue) => {
       return { [stateProp]: defaultValue };
     }),
 
-    mutations: mapStateProps(stateProps, (stateProp, mutation) => {
+    mutations: mapStateProps(stateProps, (stateProp, mutation, defaultValue) => {
       return {
-        [mutation](state, value) {
+        [mutation](state, value = defaultValue) {
+          debug(mutation, value);
           state[stateProp] = value;
         }
       };
